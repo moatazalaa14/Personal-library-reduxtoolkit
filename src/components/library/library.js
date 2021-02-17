@@ -13,16 +13,19 @@ const dispatch=useDispatch()
     <div className='library'>
       <h2>Library</h2>
       <table>
+        <thead>
         <tr>
           <th>Title</th>
           <th>Author</th>
           <th>Rating</th>
           <th></th>
         </tr>
+        </thead>
+        <tbody>
         {
           books.map(book=>{
             return(
-              <tr>
+              <tr key={book.id}>
           <td>{book.title}</td>
           <td>{book.author}</td>
           <td>{book.rating}</td>
@@ -33,6 +36,7 @@ const dispatch=useDispatch()
             )
           })
         }
+        </tbody>
       </table>
     </div>
   );

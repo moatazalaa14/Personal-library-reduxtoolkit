@@ -1,13 +1,12 @@
 
 import React, { useState } from 'react';
-import {useSelector ,useDispatch} from "react-redux"
+import {useDispatch} from "react-redux"
 import {uniId} from "../../slice/bookSlice"
 import {addBook} from "../../slice/bookSlice"
 const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [rating, setRating] = useState('5');
-    const books=useSelector(state =>  state.library)
     const dispatch=useDispatch()
     const addBookHandler = (e) => {
       e.preventDefault()
